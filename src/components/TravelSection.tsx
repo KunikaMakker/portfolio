@@ -94,7 +94,7 @@ const TravelSection = () => {
                                     className={`w-full h-full object-cover ${dest.position} group-hover:scale-105 transition-transform duration-700`}
                                 />
                                 {/* subtle dark overlay for readability */}
-                                <div className="absolute inset-0 bg-foreground/10 group-hover:bg-foreground/5 transition-colors duration-500" />
+                                <div className="absolute inset-0 bg-foreground/20 group-hover:bg-foreground/10 transition-colors duration-500" />
                             </div>
 
                             {/* Content */}

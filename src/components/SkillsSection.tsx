@@ -21,7 +21,7 @@ const skillGroups = [
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-16 md:py-24 bg-card bg-grain">
+    <section id="skills" className="py-12 md:py-20 bg-card bg-grain border-y border-border">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
