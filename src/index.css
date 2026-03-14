@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 97%;
+    --foreground: 200 15% 15%;
+
+    --card: 40 25% 95%;
+    --card-foreground: 200 15% 15%;
+
+    --popover: 40 30% 97%;
+    --popover-foreground: 200 15% 15%;
+
+    --primary: 165 35% 40%;
+    --primary-foreground: 40 30% 97%;
+
+    --secondary: 16 50% 65%;
+    --secondary-foreground: 40 30% 97%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 200 10% 45%;
+
+    --accent: 185 40% 45%;
+    --accent-foreground: 40 30% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 165 35% 40%;
+
+    --radius: 0.75rem;
+
+    --sage: 165 35% 40%;
+    --sage-light: 165 25% 85%;
+    --terracotta: 16 50% 65%;
+    --terracotta-light: 16 40% 90%;
+    --sand: 40 30% 92%;
+    --teal: 185 40% 45%;
+    --teal-light: 185 30% 88%;
+    --warm-dark: 200 15% 15%;
+
+    --font-display: 'DM Serif Display', serif;
+    --font-body: 'Space Grotesk', sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 40 20% 90%;
+
+    --card: 220 18% 13%;
+    --card-foreground: 40 20% 90%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 165 40% 37%;
+    --primary-foreground: 220 20% 10%;
+
+    --secondary: 16 45% 55%;
+    --secondary-foreground: 40 20% 95%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 40 15% 60%;
+
+    --accent: 185 35% 50%;
+    --accent-foreground: 220 20% 10%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 165 40% 50%;
+
+    --sage: 165 40% 50%;
+    --sage-light: 165 20% 20%;
+    --terracotta: 16 45% 55%;
+    --terracotta-light: 16 30% 18%;
+    --sand: 40 15% 16%;
+    --teal: 185 35% 50%;
+    --teal-light: 185 20% 18%;
+    --warm-dark: 40 20% 90%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--sage)), hsl(var(--teal)));
+  }
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
