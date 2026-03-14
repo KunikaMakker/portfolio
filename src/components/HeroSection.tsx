@@ -4,13 +4,13 @@ import { Code, Download, Mail } from "lucide-react";
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label='Banner'>
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0" aria-label='Banner'>
             {/* Background */}
             <div className="absolute inset-0">
                 <img src={heroBg} alt="" className="w-full h-full object-cover opacity-45" />
                 <div className="absolute inset-0 bg-background/40" />
             </div>
-            <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div className="relative z-10 max-w-5xl mx-auto p-6 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -50,20 +50,20 @@ const HeroSection = () => {
                 >
                     <a
                         href="#work"
-                        className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
+                        className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity "
                     >
                         <Code size={18} /> View My Work
                     </a>
                     <a
                         href="/Kunika_Makker.pdf"
                         download
-                        className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-secondary text-secondary-foreground font-medium hover:opacity-90 transition-opacity"
+                        className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-secondary text-secondary-foreground font-medium hover:opacity-90 transition-opacity "
                     >
                         <Download size={18} /> Download Resume
                     </a>
                     <a
                         href="#contact"
-                        className="inline-flex items-center gap-2 px-7 py-3 rounded-full border-2 border-foreground/25 text-foreground hover:bg-foreground/5 transition-colors"
+                        className="inline-flex items-center gap-2 px-7 py-3 rounded-full border-2 border-foreground/25 text-foreground hover:bg-foreground/5 transition-colors "
                     >
                         <Mail size={18} /> Get in Touch
                     </a>

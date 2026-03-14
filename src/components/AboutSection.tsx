@@ -43,7 +43,7 @@ const AboutSection = () => {
                         </h2>
 
                         {/* Photo + intro inline */}
-                        <div className="flex items-start gap-6 mb-6">
+                        <div className="flex flex-col sm:flex-row items-start gap-5 mb-6">
                             <div className="w-36 h-36 rounded-2xl border-2 border-primary/40 shrink-0 overflow-hidden shadow-sm">
                                 <img
                                     src={profile}
@@ -69,9 +69,9 @@ const AboutSection = () => {
 
                         {/* Second paragraph */}
                         <p className="text-muted-foreground leading-relaxed">
-                        When I'm not deep in code, you'll find me on a yoga mat at sunrise,
-                        journaling at a café, or wandering through a city I've never seen before.
-                        That same curiosity and presence shapes everything I build.
+                            When I'm not deep in code, you'll find me on a yoga mat at sunrise,
+                            journaling at a café, or wandering through a city I've never seen before.
+                            That same curiosity and presence shapes everything I build.
                         </p>
                     </motion.div>
 
