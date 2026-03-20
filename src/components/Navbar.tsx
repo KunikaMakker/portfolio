@@ -16,6 +16,19 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const { theme, toggle } = useTheme();
 
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setOpen(false);
+    setTimeout(() => {
+        const id = href.replace('#', '');
+        const element = document.getElementById(id);
+        console.log(id, element, 'scrolllll')
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    })
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/50">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
@@ -91,7 +104,7 @@ const Navbar = () => {
                   <a
                     href={l.href}
                     className="text-muted-foreground hover:text-primary transition-colors text-lg"
-                    onClick={() => setOpen(false)}
+                    onClick={(event) => handleMobileNavClick(event, l.href)}
                   >
                     {l.label}
                   </a>

@@ -80,10 +80,10 @@ const TravelSection = () => {
                     {destinations.map((dest, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.08, duration: 0.5 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ delay: i * 0.05, duration: 0.4 }}
                             className="group relative rounded-2xl border border-border overflow-hidden hover:shadow-lg hover:border-primary/30 transition-all duration-500"
                         >
                             {/* Image */}
