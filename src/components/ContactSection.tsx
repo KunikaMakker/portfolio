@@ -1,3 +1,4 @@
+import { track } from "@vercel/analytics";
 import { motion } from "framer-motion";
 import { Mail, Linkedin, Instagram, Github } from "lucide-react";
 
@@ -53,6 +54,7 @@ const ContactSection = () => {
                             <a
                                 key={s.label}
                                 href={s.href}
+                                onClick={() => track("Contact clicked", {platform: s.label})}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={`inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200

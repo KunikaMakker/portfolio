@@ -1,4 +1,5 @@
 import heroBg from '@/assets/hero-bg.jpg';
+import { track } from '@vercel/analytics';
 import { motion } from "framer-motion";
 import { Code, Download, Mail } from "lucide-react";
 
@@ -57,6 +58,7 @@ const HeroSection = () => {
                     <a
                         href="/Kunika_Makker.pdf"
                         download
+                        onClick={() => track("Resume Download", {location: "Herosection"})}
                         className="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-secondary text-secondary-foreground font-medium hover:opacity-90 transition-opacity "
                     >
                         <Download size={18} /> Download Resume

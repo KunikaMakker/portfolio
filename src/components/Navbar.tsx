@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon, Download } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
+import { track } from "@vercel/analytics";
 
 const links = [
   { label: "About", href: "#about" },
@@ -56,6 +57,7 @@ const Navbar = () => {
           <a
             href="/Kunika_Makker.pdf"
             download
+            onClick={() => track("Resume Download", {location: 'header - Desktop'})}
             className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
           >
             <Download size={14} /> Resume
@@ -115,6 +117,7 @@ const Navbar = () => {
                   href="/Kunika_Makker.pdf"
                   download
                   className="inline-flex items-center gap-2 text-primary text-lg"
+                  onClick={() => track("Resume Download", {location: "Header - mobile"})}
                 >
                   <Download size={18} /> Download Resume
                 </a>
