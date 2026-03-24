@@ -47,7 +47,7 @@ const AboutSection = () => {
                             <div className="w-36 h-36 rounded-2xl border-2 border-primary/40 shrink-0 overflow-hidden shadow-sm">
                                 <img
                                     src={profile}
-                                    alt="Kunika"
+                                    alt="Kunika Makker - Senior Frontend Engineer"
                                     className="w-full h-full object-cover scale-x-[-1]"
                                 />
                             </div>

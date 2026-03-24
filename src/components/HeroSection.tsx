@@ -7,7 +7,7 @@ const HeroSection = () => {
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0" aria-label='Banner'>
             {/* Background */}
             <div className="absolute inset-0">
-                <img src={heroBg} alt="" className="w-full h-full object-cover opacity-45" />
+                <img src={heroBg} alt="Kunika Makker - Banner" className="w-full h-full object-cover opacity-45" />
                 <div className="absolute inset-0 bg-background/40" />
             </div>
             <div className="relative z-10 max-w-5xl mx-auto p-6 text-center">

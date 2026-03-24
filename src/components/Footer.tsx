@@ -6,6 +6,9 @@ const Footer = () => (
       <span className="font-display text-lg text-foreground">
         kunika<span className="text-primary">.</span>
       </span>
+      <p className="hidden">
+        Kunika Makker, Kunika Makkar, Kanika Makker, Kanika Makkar
+      </p>
       <p className="text-muted-foreground text-sm flex items-center gap-1">
         Made with <Heart size={14} className="text-secondary" /> & mindfulness by Kunika
       </p>
